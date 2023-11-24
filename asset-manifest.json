@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Mavericks/static/css/main.a88e2164.css",
+    "main.js": "/Mavericks/static/js/main.ef5be7dd.js",
+    "static/js/787.24f7a83b.chunk.js": "/Mavericks/static/js/787.24f7a83b.chunk.js",
+    "static/media/Gecko.png": "/Mavericks/static/media/Gecko.83dc00febd0600b08655.png",
+    "static/media/communities.png": "/Mavericks/static/media/communities.ddf19e9334de517bd026.png",
+    "static/media/NotoSans-Regular.ttf": "/Mavericks/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
+    "static/media/hansa.png": "/Mavericks/static/media/hansa.35970ed7bea44430356b.png",
+    "static/media/Golconda2.png": "/Mavericks/static/media/Golconda2.994e32dae4a2dfa67f51.png",
+    "static/media/OpenSans-Regular.ttf": "/Mavericks/static/media/OpenSans-Regular.5657d820611359a23e8b.ttf",
+    "static/media/ProductSans-Regular.ttf": "/Mavericks/static/media/ProductSans-Regular.2765c69613690b1b9c03.ttf",
+    "static/media/chhipkali1.png": "/Mavericks/static/media/chhipkali1.d5423f3fce5d63d7c38b.png",
+    "static/media/MWLogo.png": "/Mavericks/static/media/MWLogo.62712e056efcda9e8912.png",
+    "static/media/bhujogi.jpg": "/Mavericks/static/media/bhujogi.048765a1ac00fecaa802.jpg",
+    "static/media/heart_copyright.jpg": "/Mavericks/static/media/heart_copyright.8cd4dd120b68e7dcf91f.jpg",
+    "static/media/downvote.svg": "/Mavericks/static/media/downvote.aeab636fe74e8e20278c851c91d65896.svg",
+    "static/media/upvote.svg": "/Mavericks/static/media/upvote.69d5058a4d073642ee645d0962a0088b.svg",
+    "static/media/information-icon.svg": "/Mavericks/static/media/information-icon.e2d9fb9743ad500ab51b849220577184.svg",
+    "index.html": "/Mavericks/index.html",
+    "static/media/person-icon.svg": "/Mavericks/static/media/person-icon.5e281f9080a2d3ccb7db58cb19fe2915.svg",
+    "static/media/log-out-icon.svg": "/Mavericks/static/media/log-out-icon.8839a7778bfcf97bb12133e9f2983cb4.svg",
+    "static/media/exit-icon.svg": "/Mavericks/static/media/exit-icon.62f700eeaa0ff40694cd825f39bdf74b.svg",
+    "static/media/upside-down-triangle.svg": "/Mavericks/static/media/upside-down-triangle.620c015c0a141852e251edc59ca9e5b6.svg",
+    "main.a88e2164.css.map": "/Mavericks/static/css/main.a88e2164.css.map",
+    "main.ef5be7dd.js.map": "/Mavericks/static/js/main.ef5be7dd.js.map",
+    "787.24f7a83b.chunk.js.map": "/Mavericks/static/js/787.24f7a83b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a88e2164.css",
+    "static/js/main.ef5be7dd.js"
+  ]
+}
