@@ -101,7 +101,7 @@ const AuthModal: React.FC = () => {
         }
       }
       else {
-        alert("Naughty hora ke!! Please use Mathworks Email. We ensure your safety.");
+        alert("Please use Mathworks Email. We ensure your safety.");
       }
       
     } else if (signInModalState) {
@@ -111,7 +111,7 @@ const AuthModal: React.FC = () => {
           dispatch(toggleSignInModal());
         }
         else {
-          alert("Naughty hora ke!! Please use Mathworks Email. We ensure your safety.");
+          alert("Please use Mathworks Email. We ensure your safety.");
         }
         
       } catch (error) {
