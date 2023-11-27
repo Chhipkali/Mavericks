@@ -20,7 +20,7 @@ const PremiumCard: React.FC = () => {
         </div>
       </div>
       <div styleName="premium-card__button-container">
-      <button styleName="premium-card__button" onClick={() => { window.open("https://www.mathworks.com", "_blank")}}>Vote for Us!</button>
+      <button styleName="premium-card__button" onClick={() => { window.open("https://forms.office.com/pages/responsepage.aspx?id=ETrdmUhDaESb3eUHKx3B5hxpRtqVFJxOmrb9_de9rYpURDNDREpJOVNSRDdYSkxHUTdGT01QMk9YMC4u", "_blank")}}>Vote for Us!</button>
       </div>
     </Card>
   );

@@ -41,6 +41,10 @@ interface Props {
 }
 
 const Post: React.FC<Props> = (props) => {
+setTimeout(() => {
+  
+}, 3000);
+
   const { postId } = useParams();
 
   const [postData, setPostData] = useState<DocumentData | undefined>();
@@ -49,6 +53,9 @@ const Post: React.FC<Props> = (props) => {
   const isLoggedIn = useAppSelector(selectAuthStatus);
   const dispatch = useDispatch();
   const location = useLocation();
+  // setTimeout(function() {
+  //   const { id: subredditId } = useAppSelector(selectCommunityData);
+  // }, 20000);
   const { id: subredditId } = useAppSelector(selectCommunityData);
 
   useEffect(() => {
@@ -67,7 +74,7 @@ const Post: React.FC<Props> = (props) => {
     }
 
     props.data ?? fetchPost();
-    console.log(props.data);
+    //console.log("Here is prop data",postData?.imageURL );
   }, [postId, props.data]);
 
   const onVote = async (
@@ -85,30 +92,36 @@ const Post: React.FC<Props> = (props) => {
     }
 
     try {
+      
       await runTransaction(db, async (transaction) => {
         const userPostVotesRef = doc(
           db,
           "users",
           `${getUserId()}/postVotes/${postId ?? props.data?.id}`
         );
-
+        
         const postRef = doc(db, "posts", postId ?? props.data?.id);
 
         const post = await transaction.get(postRef);
 
+        
         const userPostVotes = await transaction.get(userPostVotesRef);
         let voteChange = vote;
-
+        // if(subredditId==''){
+        //   const subredditId='G_4L5JIggFHE90yrGBoBO';
+        // }
+        const defaultsubredditId='G_4L5JIggFHE90yrGBoBO';
         if (!userPostVotes.exists()) {
           const newVote = {
             id: userPostVotesRef.id,
             postId: postId ?? props.data?.id,
-            subredditId,
+            subredditId: subredditId ?? defaultsubredditId,
             voteValue: vote,
           };
-
+          // console.log('here is my vote',userPostVotesRef,newVote);
           transaction.set(userPostVotesRef, newVote);
         } else {
+        
           if (userPostVotes.data().voteValue === vote) {
             voteChange *= -1;
             transaction.update(postRef, {
@@ -125,6 +138,8 @@ const Post: React.FC<Props> = (props) => {
             });
           }
         }
+
+        //console.log('here is my vote',vote);
         transaction.update(postRef, {
           voteStatus: post?.data()?.voteStatus + voteChange,
         });
@@ -167,7 +182,7 @@ const Post: React.FC<Props> = (props) => {
           <p styleName="post-excerpt__description">
             {props.data?.link ?? postData?.link}
           </p>
-          {props.data?.imageURL ? (<div styleName="post-excerpt__image-container">
+          {(props.data?.imageURL || postData?.imageURL) ? (<div styleName="post-excerpt__image-container">
             <img
               styleName="post-excerpt__image"
               src = {props.data?.imageURL ?? postData?.imageURL}

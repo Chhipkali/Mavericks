@@ -9,10 +9,16 @@ import PersonalHomeCard from "./PersonalHomeCard/PersonalHomeCard";
 import { useState } from "react";
 import {
   collection,
+  doc,
   DocumentData,
+  DocumentReference,
+  getDoc,
   getDocs,
+  onSnapshot,
   orderBy,
+  Query,
   query,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import { db } from "../../firebase";
@@ -23,14 +29,17 @@ import Aside from "../../layouts/Aside/Aside";
 import TechStackCard from "./TechStackCard/TechStackCard";
 
 const Home: React.FC = () => {
+
   const [filteredPosts, setFilteredPosts] = useState<
     DocumentData | undefined
   >();
 
+  
   const { filterRising, filterTop, filterNew } = useFilter();
-
-  const { name } = useAppSelector(selectCommunityData);
-
+  const defaultredditname = "Chhipkali";
+  const { name } = (useAppSelector(selectCommunityData)) ?? "Chhipkali";
+  
+  console.log('Here is sachin',name);
   async function addPosts(promise: Promise<DocumentData>) {
     const data = await promise;
     setFilteredPosts(data);

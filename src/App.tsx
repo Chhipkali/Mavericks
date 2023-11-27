@@ -19,6 +19,7 @@ const App: React.FC = () => {
 
   const signInModalState = useAppSelector(selectSignInModalState);
 
+  
   return (
     <>
       {communityModalState && <CommunityModal />}

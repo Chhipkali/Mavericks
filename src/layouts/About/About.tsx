@@ -212,7 +212,7 @@ const About: React.FC = () => {
                     alt="current subreddit"
                   />
                 ) : (
-                  <FaReddit styleName="about__admin-image" />
+                  <></>
                 )}
               </div>
               {selectedFile && (

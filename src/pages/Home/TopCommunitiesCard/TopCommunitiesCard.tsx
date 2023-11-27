@@ -30,7 +30,7 @@ const TopCommunitiesCard: React.FC = () => {
 
         const q = query(
           subredditsRef,
-          orderBy("numberOfMembers", "asc"),
+          orderBy("numberOfMembers", "desc"),
           limit(10)
         );
 

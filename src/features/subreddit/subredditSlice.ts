@@ -14,6 +14,8 @@ const initialState: AuthState = {
   userCommunities: [],
 };
 
+
+
 export const selectCommunityData = (state: RootState) =>
   state.subreddit.communityData;
 

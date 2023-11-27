@@ -26,7 +26,7 @@ import { db, getUser, getUserId } from "../../../firebase";
 import { useEffect, useState } from "react";
 import { FaReddit } from "react-icons/fa";
 import { selectAuthStatus } from "../../../features/auth/authSlice";
-
+import chipkalilogo from "../../../assets/chhipkali1.png";
 interface Props {
   subredditName: string | undefined;
 }
@@ -133,7 +133,7 @@ const Header: React.FC<Props> = ({ subredditName }) => {
               alt="subreddit logo"
             />
           ) : (
-            <FaReddit styleName="header__subreddit-picture" />
+            <></>
           )}
           <div styleName="header__title-container">
             <div styleName="header__title">

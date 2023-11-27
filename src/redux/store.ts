@@ -13,8 +13,10 @@ export const store = configureStore({
   },
 });
 
+console.log('Hello sachin this side');
 export function authStateObserver(user: User | null) {
   if (user) {
+    //console.log(user);
     store.dispatch(setLoginStatus(true));
   } else {
     store.dispatch(setLoginStatus(false));
@@ -22,6 +24,7 @@ export function authStateObserver(user: User | null) {
 }
 
 
+console.log(store);
 
 
 export type RootState = ReturnType<typeof store.getState>;
